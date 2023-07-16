@@ -1,6 +1,5 @@
 import React from "react";
-import { SearchBox, SearchBoxHook } from "../components/searchbox";
-import  {robots} from "../robot";
+import { SearchBox } from "../components/searchbox";
 import {Cardlist} from "../components/Cardlist";
 import "./App.css";
 import Scroll from "../components/scroll";
