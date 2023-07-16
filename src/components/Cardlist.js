@@ -14,6 +14,10 @@ class Cardlist extends React.Component {
 }
 
 const CardlistHook = (props)=> {
+    if (true) {
+        throw new Error("Nooooo");
+    }
+
     return (
         <div>
             {props.robots.map(({id,name, email})=> {
