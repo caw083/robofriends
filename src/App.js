@@ -13,33 +13,24 @@ class App extends React.Component {
         }
     }
     SearchChange = (event) => {
-        this.setState({searchfield: event.target.value})
-        this.setState({robots: robots.filter((robot) => {
-            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
-        })})
+        this.setState({searchfield: event.target.value});
     }
 
 
     render() {
+        const filteredRobots = this.state.robots.filter((robot) => {
+            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());})
+         
+    
         return (
         <div className="tc">
             <h1>RoboFriends</h1>
             <SearchBox onChange={this.SearchChange}/>
-            <Cardlist robots={this.state.robots} />
+            <Cardlist robots={filteredRobots} />
         </div>
         )
   }
 }
 
-const AppHook = () => {
-    return ( 
-    <div>
-        <h1>RoboFriends</h1>
-        <SearchBoxHook />
-        <Cardlist robots={robots} />
-    </div>
-    );
-
-}
 
 export default App;

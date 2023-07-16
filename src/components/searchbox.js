@@ -13,11 +13,17 @@ class SearchBox extends React.Component {
         )
     }
 }
-const SearchBoxHook = () => {
+const SearchBoxHook = (props) => {
     return (
-    <input type="search" placeholder="search robots" />
-    
-    )
+        <div className="p2">
+           <input
+           className="pa3 ba b--green bg-lightest-blue" 
+           type="search" 
+           placeholder="search robots"
+           onChange={props.onChange} />
+       </div>
+       )
+  
  };
 
 export {SearchBox, SearchBoxHook};
